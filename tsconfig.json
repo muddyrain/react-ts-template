@@ -37,7 +37,11 @@
     // 未读取函数参数时引发错误
     "noUnusedParameters": true,
     // 在 switch 语句中为 fallthrough case 启用错误报告
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
+    "paths": {
+      "@": ["./src"]
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
