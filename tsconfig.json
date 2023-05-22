@@ -38,9 +38,9 @@
     "noUnusedParameters": true,
     // 在 switch 语句中为 fallthrough case 启用错误报告
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "@": ["./src"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"],
