@@ -1,5 +1,5 @@
 module.exports = {
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2020: true, node: true },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -10,9 +10,9 @@ module.exports = {
   overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  plugins: ['react','react-refresh','@typescript-eslint'],
+  plugins: ['react', 'react-refresh', '@typescript-eslint'],
   rules: {
     'react-refresh/only-export-components': 'warn',
-    'react/react-in-jsx-scope': 0,  
+    'react/react-in-jsx-scope': 0,
   },
 }
