@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    // 编辑配置的目标代码的版本标准
+    "target": "ESNext",
+    // 默认环境
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    // 配置编译目标的使用模块化标准
+    "module": "ESNext",
+    "skipLibCheck": true,
+    // 移除掉注释
+    "removeComments": true,
+    /* Bundler mode */
+    // 模块解析策略
+    "moduleResolution": "bundler",
+    // 允许导入包含 TypeScript 文件扩展名。
+    "allowImportingTsExtensions": true,
+    // 运行导入json
+    "resolveJsonModule": true,
+    // 确保每个文件都可以安全地转译而不依赖于其他导入。
+    "isolatedModules": true,
+    // 禁止从编译中发出文件。
+    "noEmit": true,
+    "jsx": "react-jsx",
+    // 确保每个文件都可以安全地转译而不依赖于其他导入
+    "allowSyntheticDefaultImports": true,
+    // 启用es模块化交互非es模块导出
+    "esModuleInterop": true,
+    // 开启实验性质的装饰器
+    "experimentalDecorators": true,
+    // 生成装饰器的元数据
+    "emitDecoratorMetadata": true,
+
+    /* Linting */
+    "strict": true,
+    // 未读取局部变量时启用错误报告。
+    "noUnusedLocals": true,
+    // 未读取函数参数时引发错误
+    "noUnusedParameters": true,
+    // 在 switch 语句中为 fallthrough case 启用错误报告
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
