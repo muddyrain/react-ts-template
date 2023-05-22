@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className="flex justify-center">
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
