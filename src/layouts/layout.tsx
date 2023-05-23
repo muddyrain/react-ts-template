@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import { useLocation } from 'react-router-dom'
 import { Layout, Breadcrumb } from 'antd'
 import { RoutesProps } from '@/constant/types'
 import { HeaderComponent, SliderComponent } from '.'

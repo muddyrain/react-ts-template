@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Layout, Dropdown, Space } from 'antd'
-import { DownOutlined, UserOutlined, LogoutOutlined } from '@ant-design/icons'
+import { UserOutlined, LogoutOutlined } from '@ant-design/icons'
 import { Avatar, Logo } from '@/assets'
 import { useNavigate } from 'react-router-dom'
 export const HeaderComponent: FC = () => {
