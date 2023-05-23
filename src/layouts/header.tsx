@@ -7,7 +7,7 @@ export const HeaderComponent: FC = () => {
     <>
       <Layout.Header className="flex items-center justify-between bg-white">
         {/* 左侧 */}
-        <div className="flex items-center">
+        <div className="flex items-center cursor-pointer">
           {/* Logo */}
           <img src={Logo} />
           {/* 标题 */}

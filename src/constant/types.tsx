@@ -25,4 +25,5 @@ export type RoutesProps = RouteObject & {
   breadcrumb?: BreadcrumbProps['items']
   // 父路由
   parentRoute?: string
+  children?: RoutesProps[]
 }
