@@ -2,12 +2,18 @@ import { FC } from 'react'
 import { Layout, Dropdown, Space } from 'antd'
 import { DownOutlined, UserOutlined, LogoutOutlined } from '@ant-design/icons'
 import { Avatar, Logo } from '@/assets'
+import { useNavigate } from 'react-router-dom'
 export const HeaderComponent: FC = () => {
+  const navigate = useNavigate()
+
   return (
     <>
       <Layout.Header className="flex items-center justify-between bg-white">
         {/* 左侧 */}
-        <div className="flex items-center cursor-pointer">
+        <div
+          className="flex h-full px-4 items-center cursor-pointer duration-300 hover:bg-zinc-100"
+          onClick={() => navigate('/')}
+        >
           {/* Logo */}
           <img src={Logo} />
           {/* 标题 */}
@@ -32,7 +38,7 @@ export const HeaderComponent: FC = () => {
               ],
             }}
           >
-            <Space className="hover:bg-gray-200 duration-300 px-2 cursor-pointer">
+            <Space className="hover:bg-zinc-100 duration-300 px-4 cursor-pointer">
               <img src={Avatar} />
               <span>沙琪玛~</span>
             </Space>

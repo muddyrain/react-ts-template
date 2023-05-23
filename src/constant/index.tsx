@@ -5,4 +5,4 @@
 
 import { RoutesTypes } from './types'
 
-export const routesType: RoutesTypes = RoutesTypes.hash
+export const ROUTE_TYPE: RoutesTypes = RoutesTypes.hash

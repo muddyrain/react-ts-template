@@ -13,17 +13,37 @@ export enum RoutesTypes {
  * 路由配置
  */
 export type RoutesProps = RouteObject & {
-  // 页面名称
+  /**
+   * 页面名称,同面包屑导航名称
+   */
   name: string
-  // 隐藏菜单
+  /**
+   * 在菜单中隐藏显示选项
+   */
   hideMenu?: boolean
-  // 纯净模式
+  /**
+   * 纯净模式 - 无任何容器包含
+   */
   pure?: boolean
-  // 背景颜色
+  /**
+   * 背景颜色
+   * 默认为: #ffffff
+   */
   backgroundColor?: string
-  // 面包屑
+  /**
+   * 面包屑配置
+   */
   breadcrumb?: BreadcrumbProps['items']
-  // 父路由
-  parentRoute?: string
+  /**
+   * 父路由路径
+   */
+  parentPath?: string
+  /**
+   * 子节点们
+   */
   children?: RoutesProps[]
+  /**
+   * 样式表任意css - 嵌入到 layout容器里
+   */
+  styles?: React.CSSProperties
 }

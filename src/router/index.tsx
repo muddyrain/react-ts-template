@@ -1,32 +1,30 @@
+import { RoutesProps } from '@/constant/types'
 import { HomePage } from '@/pages/home'
-import { routesType } from '@/constant'
-import { RoutesProps, RoutesTypes } from '@/constant/types'
-import { createBrowserRouter, createHashRouter } from 'react-router-dom'
-import { LayoutComponent } from '@/layouts'
 import { Page2Page } from '@/pages/page2'
-const createRoute = routesType === RoutesTypes.hash ? createHashRouter : createBrowserRouter
-
-const router = createRoute([
+import { Detail } from '@/pages/page2/detail'
+export const routes: RoutesProps[] = [
   {
     path: '/',
-    element: <LayoutComponent />,
-    breadcrumb: [],
-    name: '',
+    id: '/a',
+    name: '哈哈哈',
+    element: <HomePage />,
+  },
+  {
+    path: '/a',
+    name: 'page2',
     children: [
       {
-        path: '/',
-        id: '/a',
-        name: '哈哈哈',
-        element: <HomePage />,
+        path: '/b',
+        name: 'page2-2',
+        element: <Page2Page />,
       },
       {
-        path: '/page2',
-        id: '哈哈',
-        name: 'page2',
-        element: <Page2Page />,
+        path: '/d',
+        hideMenu: true,
+        parentPath: '/b',
+        name: 'page2-detail',
+        element: <Detail />,
       },
     ],
   },
-] as RoutesProps[])
-
-export default router
+]
