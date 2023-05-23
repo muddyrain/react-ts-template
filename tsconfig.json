@@ -33,9 +33,9 @@
     /* Linting */
     "strict": true,
     // 未读取局部变量时启用错误报告。
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     // 未读取函数参数时引发错误
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     // 在 switch 语句中为 fallthrough case 启用错误报告
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
