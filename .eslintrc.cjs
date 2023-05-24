@@ -16,5 +16,7 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     // hooks 依赖不检测
     'react-hooks/exhaustive-deps': 0,
+    // 禁止检测 ! 断言
+    '@typescript-eslint/no-non-null-assertion': 0,
   },
 }

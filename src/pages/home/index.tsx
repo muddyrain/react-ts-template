@@ -1,9 +1,16 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from '@/assets/react.svg'
 import './index.css'
 import { Button } from 'antd'
+import '@/service/index'
+import { getDogApi } from '@/api'
 export const HomePage = () => {
   const [count, setCount] = useState(0)
+  useEffect(() => {
+    getDogApi({ a: 1, b: 2 }).then(res => {
+      console.log(res)
+    })
+  }, [])
   return (
     <>
       <div className="flex justify-center">

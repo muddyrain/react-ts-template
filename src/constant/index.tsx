@@ -6,3 +6,4 @@
 import { RoutesTypes } from './types'
 
 export const ROUTE_TYPE: RoutesTypes = RoutesTypes.hash
+export const REQUEST_URL = import.meta.env['VITE_BASE_URL']
