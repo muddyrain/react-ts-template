@@ -38,10 +38,10 @@ export const HeaderComponent: FC = () => {
               ],
             }}
           >
-            <Space className="hover:bg-zinc-100 duration-300 px-4 cursor-pointer">
+            <div className="hover:bg-zinc-100 flex items-center duration-300 px-4 cursor-pointer">
               <img src={Avatar} />
-              <span>沙琪玛~</span>
-            </Space>
+              <span className="ml-1">沙琪玛~</span>
+            </div>
           </Dropdown>
         </div>
       </Layout.Header>

@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import { Layout, Breadcrumb } from 'antd'
 import { RoutesProps } from '@/constant/types'
 import { HeaderComponent, SliderComponent } from '.'
+import { LAYOUT_SCROLLBAR_CLASSES } from '@/constant/classes'
 const { Content } = Layout
 export const LayoutComponent: FC<{
   children: React.ReactNode
@@ -46,7 +47,7 @@ export const LayoutComponent: FC<{
           />
           {/* 内容中心 */}
           <Content
-            className="p-4"
+            className={`p-4 overflow-auto ${LAYOUT_SCROLLBAR_CLASSES}`}
             style={{
               backgroundColor,
               ...styles,

@@ -4,6 +4,7 @@ import { RoutesProps } from '@/constant/types'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { routes } from '@/router'
 import { ItemType, SubMenuType } from 'antd/es/menu/hooks/useItems'
+import { SLIDER_SCROLLBAR_CLASSES } from '@/constant/classes'
 export const SliderComponent: FC<{
   routeConfiguration: RoutesProps
 }> = ({ routeConfiguration: { parentPath, path } }) => {
@@ -45,7 +46,11 @@ export const SliderComponent: FC<{
   }, [])
   return (
     <>
-      <Layout.Sider theme="light" width={200}>
+      <Layout.Sider
+        theme="light"
+        width={200}
+        className={`overflow-auto ${SLIDER_SCROLLBAR_CLASSES}`}
+      >
         <Menu
           items={menuItems}
           selectedKeys={[selectedKey]}

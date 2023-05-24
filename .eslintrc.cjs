@@ -14,6 +14,7 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
     'react/react-in-jsx-scope': 0,
+    // hooks 依赖不检测
     'react-hooks/exhaustive-deps': 0,
   },
 }

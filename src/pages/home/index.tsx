@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from '@/assets/react.svg'
 import './index.css'
+import { Button } from 'antd'
 export const HomePage = () => {
   const [count, setCount] = useState(0)
   return (
@@ -12,12 +13,18 @@ export const HomePage = () => {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
+        <Button type="primary" onClick={() => setCount(count => count + 1)}>
+          count is {count}
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      {Array.from({ length: 1000 }).map((item, index) => (
+        <p key={index} className="read-the-docs">
+          Click on the Vite and React logos to learn
+        </p>
+      ))}
     </>
   )
 }

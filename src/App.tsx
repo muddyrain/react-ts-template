@@ -4,6 +4,7 @@ import { routes } from './router'
 import { RoutesProps, RoutesTypes } from './constant/types'
 import { LayoutComponent } from './layouts'
 import { ROUTE_TYPE } from './constant'
+import { NotFound404 } from './pages/NotFound404'
 const createRoute = (routes: RoutesProps[]) => {
   const list: React.ReactNode[] = []
   const recursion = (routes: RoutesProps[]) => {
@@ -34,7 +35,10 @@ export const App: FC = () => {
 
   return (
     <RouterComponent>
-      <Routes>{createRoute(routes)}</Routes>
+      <Routes>
+        <>{createRoute(routes)}</>
+        <Route path="*" element={<NotFound404 />}></Route>
+      </Routes>
     </RouterComponent>
   )
 }

@@ -5,7 +5,6 @@ import { Detail } from '@/pages/page2/detail'
 export const routes: RoutesProps[] = [
   {
     path: '/',
-    id: '/a',
     name: '哈哈哈',
     element: <HomePage />,
   },
