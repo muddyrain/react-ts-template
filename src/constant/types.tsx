@@ -23,6 +23,10 @@ export enum RoutesTypes {
  */
 export type RoutesProps = RouteObject & {
   /**
+   * 路由路径
+   */
+  path: string
+  /**
    * 页面名称,同面包屑导航名称
    */
   name: string
@@ -55,4 +59,8 @@ export type RoutesProps = RouteObject & {
    * 样式表任意css - 嵌入到 layout容器里
    */
   styles?: React.CSSProperties
+  /**
+   * 页面是否需要登录
+   */
+  needLogin?: boolean
 }

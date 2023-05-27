@@ -37,9 +37,8 @@ export const SliderComponent: FC<{
       return menuItem
     })
   }
-  const [currentSelectKey, setCurrentSelectKey] = useState(location.pathname)
   const selectedKey = useMemo(() => {
-    return parentPath || currentSelectKey
+    return parentPath || path
   }, [path])
   const menuItems = useMemo(() => {
     return formateRoutes(routes as RoutesProps[])
@@ -58,7 +57,6 @@ export const SliderComponent: FC<{
           defaultOpenKeys={routesPaths.current}
           onSelect={({ key }) => {
             navigate(key)
-            setCurrentSelectKey(key)
           }}
         />
       </Layout.Sider>

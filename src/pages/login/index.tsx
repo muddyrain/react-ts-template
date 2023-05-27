@@ -3,10 +3,8 @@ import styles from './index.module.less'
 import images from './images'
 import { useSetState, useLocalStorageState } from 'ahooks'
 import { EyeInvisibleOutlined, EyeOutlined, LoadingOutlined } from '@ant-design/icons'
-import { useNavigate } from 'react-router-dom'
 import { AccountInfoType } from '@/constant/types'
 export const LoginPage: FC = () => {
-  const navigate = useNavigate()
   const [state, setState] = useSetState({
     username: 'admin',
     password: '123456',
@@ -29,7 +27,7 @@ export const LoginPage: FC = () => {
       setState({
         loading: false,
       })
-      navigate('/')
+      window.location.href = '/'
     }, 1000)
   }
   return (

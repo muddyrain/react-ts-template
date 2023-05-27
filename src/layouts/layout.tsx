@@ -1,14 +1,19 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import { Layout, Breadcrumb } from 'antd'
 import { RoutesProps } from '@/constant/types'
 import { HeaderComponent, SliderComponent } from '.'
 import { LAYOUT_SCROLLBAR_CLASSES } from '@/constant/classes'
+import { useLocalStorageState } from 'ahooks'
+import { AccountInfoType } from '@/constant/types'
+import { Link, useNavigate } from 'react-router-dom'
+import { NotNeedLoginWhiteList } from '@/router/whiteList'
 const { Content } = Layout
 export const LayoutComponent: FC<{
   children: React.ReactNode
   routes: RoutesProps[]
   routeConfiguration: RoutesProps
 }> = ({ children, routeConfiguration }) => {
+  const navigate = useNavigate()
   const {
     backgroundColor = '#ffffff',
     breadcrumb = [],
@@ -16,6 +21,19 @@ export const LayoutComponent: FC<{
     name = '',
     styles = {},
   } = (routeConfiguration as RoutesProps) || {}
+  const [accountInfo, setAccountInfo] = useLocalStorageState<AccountInfoType | undefined>(
+    'accountInfo'
+  )
+  useEffect(() => {
+    const needLoginType = Object.prototype.toString.call(routeConfiguration?.needLogin)
+    if (!(needLoginType === '[object Boolean]' && routeConfiguration.needLogin)) {
+      if (!accountInfo?.token && !NotNeedLoginWhiteList.includes(routeConfiguration.path)) {
+        setAccountInfo()
+        navigate('/login')
+      }
+    }
+  }, [routeConfiguration, accountInfo])
+
   // 纯净模式默认无布局
   if (pure) {
     return <>{React.cloneElement(children as JSX.Element, { ...routeConfiguration })}</>

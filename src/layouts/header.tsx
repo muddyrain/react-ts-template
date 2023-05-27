@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Layout, Dropdown, Space } from 'antd'
+import { Layout, Dropdown } from 'antd'
 import { UserOutlined, LogoutOutlined } from '@ant-design/icons'
 import { Avatar, Logo } from '@/assets'
 import { useNavigate } from 'react-router-dom'
@@ -7,7 +7,9 @@ import { useLocalStorageState } from 'ahooks'
 import { AccountInfoType } from '@/constant/types'
 export const HeaderComponent: FC = () => {
   const navigate = useNavigate()
-  const [accountInfo] = useLocalStorageState<AccountInfoType>('accountInfo', {})
+  const [accountInfo, setAccountInfo] = useLocalStorageState<AccountInfoType | undefined>(
+    'accountInfo'
+  )
   return (
     <>
       <Layout.Header className="flex items-center justify-between bg-white">
@@ -36,6 +38,10 @@ export const HeaderComponent: FC = () => {
                   label: '退出登录',
                   icon: <LogoutOutlined />,
                   key: 'logout',
+                  onClick: () => {
+                    setAccountInfo()
+                    navigate('/login')
+                  },
                 },
               ],
             }}
