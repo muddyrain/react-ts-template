@@ -34,7 +34,7 @@ export const LayoutComponent: FC<{
             items={[
               {
                 title: '首页',
-                href: '/',
+                path: '/',
               },
               ...(breadcrumb?.length
                 ? [...breadcrumb]
