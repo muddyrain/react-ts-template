@@ -5,7 +5,7 @@ import { HeaderComponent, SliderComponent } from '.'
 import { LAYOUT_SCROLLBAR_CLASSES } from '@/constant/classes'
 import { useLocalStorageState } from 'ahooks'
 import { AccountInfoType } from '@/constant/types'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { NotNeedLoginWhiteList } from '@/router/whiteList'
 const { Content } = Layout
 export const LayoutComponent: FC<{

@@ -1,14 +1,13 @@
-import { FC, useMemo, useRef, useState } from 'react'
+import { FC, useMemo, useRef } from 'react'
 import { Layout, Menu } from 'antd'
 import { RoutesProps } from '@/constant/types'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { routes } from '@/router'
 import { ItemType, SubMenuType } from 'antd/es/menu/hooks/useItems'
 import { SLIDER_SCROLLBAR_CLASSES } from '@/constant/classes'
 export const SliderComponent: FC<{
   routeConfiguration: RoutesProps
 }> = ({ routeConfiguration: { parentPath, path } }) => {
-  const location = useLocation()
   const navigate = useNavigate()
   const routesPaths = useRef<string[]>([])
   const formateRoutes = (routes: RoutesProps[]) => {
