@@ -1,0 +1,39 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(216deg, #0395F5, #0349FA);
+  position: relative;
+
+  .leftBox {
+    background: linear-gradient(-40deg, #0349FA, #24C7FC);
+  }
+
+  .rightBox {
+
+
+    .input_box {
+      input {
+        &::placeholder {
+          color: #B9BED1;
+        }
+
+        border: none;
+        outline: none;
+        border: 2px solid #EEEEEE;
+        border-radius: 37px;
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5%;
+      }
+
+      position: relative;
+      margin-bottom: 30px;
+    }
+  }
+}

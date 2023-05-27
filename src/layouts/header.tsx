@@ -3,9 +3,11 @@ import { Layout, Dropdown, Space } from 'antd'
 import { UserOutlined, LogoutOutlined } from '@ant-design/icons'
 import { Avatar, Logo } from '@/assets'
 import { useNavigate } from 'react-router-dom'
+import { useLocalStorageState } from 'ahooks'
+import { AccountInfoType } from '@/constant/types'
 export const HeaderComponent: FC = () => {
   const navigate = useNavigate()
-
+  const [accountInfo] = useLocalStorageState<AccountInfoType>('accountInfo', {})
   return (
     <>
       <Layout.Header className="flex items-center justify-between bg-white">
@@ -40,7 +42,7 @@ export const HeaderComponent: FC = () => {
           >
             <div className="hover:bg-zinc-100 flex items-center duration-300 px-4 cursor-pointer">
               <img src={Avatar} />
-              <span className="ml-1">沙琪玛~</span>
+              <span className="ml-1">{accountInfo?.username || '沙琪玛~'}</span>
             </div>
           </Dropdown>
         </div>

@@ -2,6 +2,15 @@ import { BreadcrumbProps } from 'antd'
 import { RouteObject } from 'react-router-dom'
 
 /**
+ * 用户账号信息
+ */
+export interface AccountInfoType {
+  username: string
+  password: string
+  token: string
+}
+
+/**
  * 路由类型
  */
 export enum RoutesTypes {
