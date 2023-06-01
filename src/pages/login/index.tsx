@@ -34,7 +34,7 @@ export const LoginPage: FC = () => {
     <div className={styles.container}>
       <img className="absolute right-0 top-0 w-[8%] h-[15%]" src={images.RightTopImage} />
       <img className="absolute left-0 top-[15%] w-[5%] h-[20%]" src={images.LeftCenterTopImage} />
-      <div className=" absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] m-auto w-[1480px] h-[850px] overflow-hidden rounded-lg flex">
+      <div className=" absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] m-auto 2xl:w-[1480px] 2xl:h-[750px]  w-[1180px] h-[650px] overflow-hidden rounded-lg flex">
         <div className={`${styles.leftBox} w-1/2 relative p-16`}>
           <img
             src={images.ContentImage}
@@ -51,7 +51,11 @@ export const LoginPage: FC = () => {
         </div>
         <div className={`w-1/2 bg-white relative p-40 ${styles.rightBox}`}>
           <img className="absolute top-0 left-0 h-[6%] w-[25%]" src={images.LoginTopImage} alt="" />
-          <img className="absolute bottom-0 w-full h-[25%]" src={images.LoginBottomImage} alt="" />
+          <img
+            className="absolute bottom-0 left-0 w-full h-[25%]"
+            src={images.LoginBottomImage}
+            alt=""
+          />
           <div className="relative z-1">
             <div className="text-center">
               <div className="inline-block text-3xl text-blue-600 font-bold relative">
