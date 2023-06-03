@@ -1,6 +1,8 @@
 import axios, { AxiosInstance } from 'axios'
 import { dealBusinessError, dealNetworkError } from './handle'
 import { IAxiosInstanceProps } from './types'
+import 'nprogress/nprogress.css'
+import NProgress from 'nprogress'
 
 export class CreateAxiosInstance {
   private whiteList: IAxiosInstanceProps['whiteList'] = []
@@ -23,6 +25,7 @@ export class CreateAxiosInstance {
     })
     this.fetch.interceptors.request.use(
       config => {
+        NProgress.start()
         const accountJSON = window.sessionStorage.getItem('accountInfo')
         const accountInfo = JSON.parse(accountJSON || '{}')
         if (accountInfo?.token) {
@@ -47,6 +50,7 @@ export class CreateAxiosInstance {
 
     this.fetch.interceptors.response.use(
       response => {
+        NProgress.done()
         const requestUrl = response.config.url || ''
         // 白名单
         const isWhite = this.whiteList?.some(item => item.includes(requestUrl))
@@ -62,6 +66,7 @@ export class CreateAxiosInstance {
         }
       },
       error => {
+        NProgress.done()
         dealNetworkError(error?.response || {}, { codeList, maps, Alert })
         return Promise.reject(error)
       }
