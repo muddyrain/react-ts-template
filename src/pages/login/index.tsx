@@ -49,7 +49,7 @@ export const LoginPage: FC = () => {
             </div>
           </div>
         </div>
-        <div className={`w-1/2 bg-white relative p-40 ${styles.rightBox}`}>
+        <div className={`w-1/2 bg-white relative p-24 ${styles.rightBox}`}>
           <img className="absolute top-0 left-0 h-[6%] w-[25%]" src={images.LoginTopImage} alt="" />
           <img
             className="absolute bottom-0 left-0 w-full h-[25%]"

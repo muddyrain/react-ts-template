@@ -13,7 +13,7 @@ export const routes: RoutesProps[] = [
   },
   {
     path: '/',
-    name: '哈哈哈',
+    name: '首页',
     element: <HomePage />,
   },
   {
