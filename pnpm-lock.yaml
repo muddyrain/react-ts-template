@@ -25,7 +25,7 @@ specifiers:
   eslint-plugin-react-refresh: ^0.3.4
   husky: ^8.0.3
   less: ^4.1.3
-  muddyrain: ^1.1.4
+  muddyrain: ^1.2.0
   nprogress: ^0.2.0
   postcss: ^8.4.23
   prettier: ^2.8.8
@@ -67,7 +67,7 @@ devDependencies:
   eslint-plugin-react-refresh: 0.3.5_eslint@8.41.0
   husky: 8.0.3
   less: 4.1.3
-  muddyrain: 1.1.4_reai4adcp4epbrqp6m3aaurkei
+  muddyrain: 1.2.0_reai4adcp4epbrqp6m3aaurkei
   nprogress: 0.2.0
   postcss: 8.4.23
   prettier: 2.8.8
@@ -4374,8 +4374,8 @@ packages:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
 
-  /muddyrain/1.1.4_reai4adcp4epbrqp6m3aaurkei:
-    resolution: {integrity: sha512-BX7c6BCYaU5S4GnjlVT44YPZVjWVpw1AVpp1/no9buhjFUOSXDOcveFxBRDlm3t+3vN/pEOMh+r6CaGe8Qs0vg==}
+  /muddyrain/1.2.0_reai4adcp4epbrqp6m3aaurkei:
+    resolution: {integrity: sha512-I8bzPfWPiwI6U1jTk5DzBQPHOiNF/3kbf69I5f740MDPpDCpuykw250FUdWxp4y+4owfnfdnyrp7WZABLVcVcg==}
     peerDependencies:
       ahooks: '>=3.0.0'
       antd: '>=4.0.0'
