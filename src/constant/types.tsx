@@ -31,6 +31,11 @@ export type RoutesProps = RouteObject & {
    */
   name: string
   /**
+   * 图标
+   * @types https://ant.design/components/icon-cn/ | ReactNode
+   */
+  icon?: React.ReactNode
+  /**
    * 在菜单中隐藏显示选项
    */
   hideMenu?: boolean

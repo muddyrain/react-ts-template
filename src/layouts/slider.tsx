@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { routes } from '@/router'
 import { ItemType, SubMenuType } from 'antd/es/menu/hooks/useItems'
 import { SLIDER_SCROLLBAR_CLASSES } from '@/constant/classes'
+import './menu.less'
 export const SliderComponent: FC<{
   routeConfiguration: RoutesProps
 }> = ({ routeConfiguration: { parentPath, path } }) => {
@@ -23,6 +24,7 @@ export const SliderComponent: FC<{
       const menuItem: ItemType & { children: null | SubMenuType['children'] } = {
         label: item.name || '',
         key: item.path || '',
+        icon: item.icon || '',
         children: null,
       }
       // 如果当前路由有子节点就递归遍历出子节点
@@ -46,13 +48,15 @@ export const SliderComponent: FC<{
     <>
       <Layout.Sider
         theme="light"
-        width={200}
-        className={`overflow-auto ${SLIDER_SCROLLBAR_CLASSES}`}
+        width={300}
+        className={`custom_layout_slider overflow-auto shadow-sm  ${SLIDER_SCROLLBAR_CLASSES}`}
       >
         <Menu
           items={menuItems}
           selectedKeys={[selectedKey]}
           mode="inline"
+          inlineIndent={24}
+          className="py-2"
           defaultOpenKeys={routesPaths.current}
           onSelect={({ key }) => {
             navigate(key)
