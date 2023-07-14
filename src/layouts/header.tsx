@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Layout, Dropdown, Space } from 'antd'
+import { Layout, Dropdown } from 'antd'
 import { UserOutlined, LogoutOutlined, DashboardOutlined } from '@ant-design/icons'
 import { Avatar } from '@/assets'
 import { useNavigate } from 'react-router-dom'
