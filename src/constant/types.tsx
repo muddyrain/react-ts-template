@@ -21,7 +21,7 @@ export enum RoutesTypes {
 /**
  * 路由配置
  */
-export type RoutesProps = RouteObject & {
+export type RoutesProps = Omit<RouteObject, 'children'> & {
   /**
    * 路由路径
    */
