@@ -45,24 +45,22 @@ export const SliderComponent: FC<{
     return formateRoutes(routes as RoutesProps[])
   }, [])
   return (
-    <>
-      <Layout.Sider
-        theme="light"
-        width={300}
-        className={`custom_layout_slider overflow-auto shadow-sm  ${SLIDER_SCROLLBAR_CLASSES}`}
-      >
-        <Menu
-          items={menuItems}
-          selectedKeys={[selectedKey]}
-          mode="inline"
-          inlineIndent={24}
-          className="py-2"
-          defaultOpenKeys={routesPaths.current}
-          onSelect={({ key }) => {
-            navigate(key)
-          }}
-        />
-      </Layout.Sider>
-    </>
+    <Layout.Sider
+      theme="light"
+      width={300}
+      className={`custom_layout_slider overflow-auto shadow-sm  ${SLIDER_SCROLLBAR_CLASSES}`}
+    >
+      <Menu
+        items={menuItems}
+        selectedKeys={[selectedKey]}
+        mode="inline"
+        inlineIndent={24}
+        className="py-2"
+        defaultOpenKeys={routesPaths.current}
+        onSelect={({ key }) => {
+          navigate(key)
+        }}
+      />
+    </Layout.Sider>
   )
 }

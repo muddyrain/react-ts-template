@@ -1,6 +1,6 @@
 import RightTopImage from './right-top.png'
 import LeftCenterTopImage from './left-center-top.png'
-import ContentImage from './content.png'
+import ContentImage from './content_img.png'
 import BottomImage from './bottom.png'
 import UserImage from './user.png'
 import PasswordImage from './password.png'

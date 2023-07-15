@@ -38,7 +38,7 @@ export const LoginPage: FC = () => {
         <div className={`${styles.leftBox} w-1/2 relative p-16`}>
           <img
             src={images.ContentImage}
-            className="absolute bottom-0 w-[80%] h-[85%] left-[10%]"
+            className="absolute bottom-[5%] w-[80%] h-[60%] left-[10%]"
             alt=""
           />
           <div className="relative z-1 w-[75%]">
