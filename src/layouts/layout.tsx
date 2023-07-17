@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from 'react'
-import { Layout, Breadcrumb } from 'antd'
+import { Layout, Breadcrumb, Space } from 'antd'
 import { RoutesProps } from '@/constant/types'
 import { HeaderComponent, SliderComponent } from '.'
 import { LAYOUT_SCROLLBAR_CLASSES } from '@/constant/classes'
@@ -7,6 +7,7 @@ import { useLocalStorageState } from 'ahooks'
 import { AccountInfoType } from '@/constant/types'
 import { useNavigate } from 'react-router-dom'
 import { NotNeedLoginWhiteList } from '@/router/whiteList'
+import { LeftOutlined } from '@ant-design/icons'
 const { Content } = Layout
 export const LayoutComponent: FC<{
   children: React.ReactNode
@@ -40,40 +41,54 @@ export const LayoutComponent: FC<{
   }
   return (
     <Layout className="w-full h-full">
-      {/* 头部 */}
       <HeaderComponent />
       <Layout>
         {/* 侧边栏 */}
         {<SliderComponent routeConfiguration={routeConfiguration} />}
-        <Layout className="p-4">
-          {/* 面包屑 */}
-          <Breadcrumb
-            className="mb-2"
-            items={[
-              {
-                title: '首页',
-                path: '/',
-              },
-              ...(breadcrumb?.length
-                ? [...breadcrumb]
-                : [
-                    {
-                      title: name,
-                    },
-                  ]),
-            ]}
-          />
-          {/* 内容中心 */}
-          <Content
-            className={`p-4 overflow-auto ${LAYOUT_SCROLLBAR_CLASSES}`}
-            style={{
-              backgroundColor,
-              ...styles,
-            }}
-          >
-            {children}
-          </Content>
-        </Layout>
+        {/* 头部 */}
+        <div className="flex flex-col flex-1">
+          <Layout className="p-4">
+            {/* 面包屑 */}
+            <div className="flex justify-between">
+              <Breadcrumb
+                className="mb-2"
+                items={[
+                  {
+                    title: '首页',
+                    path: '/',
+                  },
+                  ...(breadcrumb?.length
+                    ? [...breadcrumb]
+                    : [
+                        {
+                          title: name,
+                        },
+                      ]),
+                ]}
+              />
+              <Space
+                className="cursor-pointer hover:text-indigo-400 duration-300"
+                size={2}
+                onClick={() => {
+                  navigate(-1)
+                }}
+              >
+                <LeftOutlined />
+                <span>返回</span>
+              </Space>
+            </div>
+            {/* 内容中心 */}
+            <Content
+              className={`p-4 overflow-auto shadow-sm ${LAYOUT_SCROLLBAR_CLASSES}`}
+              style={{
+                backgroundColor,
+                ...styles,
+              }}
+            >
+              {children}
+            </Content>
+          </Layout>
+        </div>
       </Layout>
     </Layout>
   )

@@ -23,14 +23,8 @@ export const routes: RoutesProps[] = [
       {
         path: '/b',
         name: 'page2-2',
+        parentPath: '',
         element: <Page2Page />,
-      },
-      {
-        path: '/d',
-        hideMenu: true,
-        parentPath: '/b',
-        name: 'page2-detail',
-        element: <Detail />,
       },
     ],
   },

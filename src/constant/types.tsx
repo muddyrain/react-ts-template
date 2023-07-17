@@ -21,7 +21,7 @@ export enum RoutesTypes {
 /**
  * 路由配置
  */
-export type RoutesProps = RouteObject & {
+export type RoutesProps = Omit<RouteObject, 'children'> & {
   /**
    * 路由路径
    */
@@ -30,6 +30,11 @@ export type RoutesProps = RouteObject & {
    * 页面名称,同面包屑导航名称
    */
   name: string
+  /**
+   * 图标
+   * @types https://ant.design/components/icon-cn/ | ReactNode
+   */
+  icon?: React.ReactNode
   /**
    * 在菜单中隐藏显示选项
    */

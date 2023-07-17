@@ -34,17 +34,17 @@ export const LoginPage: FC = () => {
     <div className={styles.container}>
       <img className="absolute right-0 top-0 w-[8%] h-[15%]" src={images.RightTopImage} />
       <img className="absolute left-0 top-[15%] w-[5%] h-[20%]" src={images.LeftCenterTopImage} />
-      <div className=" absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] m-auto 2xl:w-[1480px] 2xl:h-[750px]  w-[1180px] h-[650px] overflow-hidden rounded-lg flex">
+      <div className=" absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] m-auto 2xl:w-[1380px] 2xl:h-[750px]  xl:w-[1180px] xl:h-[650px]  md:w-[960px] md:h-[520px] duration-300 overflow-hidden rounded-lg flex">
         <div className={`${styles.leftBox} w-1/2 relative p-16`}>
           <img
             src={images.ContentImage}
-            className="absolute bottom-0 w-[90%] h-[85%] left-[5%]"
+            className="absolute bottom-[5%] w-[80%] h-[60%] left-[10%]"
             alt=""
           />
           <div className="relative z-1 w-[75%]">
             <div className="line bg-white w-14 h-2"></div>
-            <div className="text-white mt-6 text-5xl">专业数据分析</div>
-            <div className="text-white mt-6 text-base tracking-widest">
+            <div className="text-white mt-6 2xl:text-5xl xl:text-4xl md:text-3xl">专业数据分析</div>
+            <div className="text-white mt-6 xl:text-base md:text-sm tracking-widest">
               数据分析是指用适当的统计分析方法对收集来的大量数据进行分析，将它们加以汇总和理解并消化，以求最大化地开发数据的功能，发挥数据的作用。
             </div>
           </div>
@@ -63,7 +63,7 @@ export const LoginPage: FC = () => {
                 <span className="line bottom-[-5%] z-0 left-[-10%] absolute w-[120%] h-2 bg-blue-100"></span>
               </div>
             </div>
-            <div className="login mt-20">
+            <div className="login xl:mt-20 md:mt-10">
               <div className={`${styles.input_box}`}>
                 <img src={images.UserImage} alt="" className={`${styles.icon}`} />
                 <input
@@ -107,7 +107,7 @@ export const LoginPage: FC = () => {
                 </div>
               </div>
               <div
-                className={`bg-blue-600 mt-16 rounded-[37px] duration-300 py-6 text-center text-white cursor-pointer hover:bg-blue-400`}
+                className={`bg-blue-600 xl:mt-16 md:8 rounded-[37px] duration-300 py-6 text-center text-white cursor-pointer hover:bg-blue-400`}
                 onClick={handleLogin}
               >
                 {state.loading && <LoadingOutlined />}
