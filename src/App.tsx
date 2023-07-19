@@ -5,6 +5,12 @@ import { RoutesProps, RoutesTypes } from './constant/types'
 import { LayoutComponent } from './layouts'
 import { ROUTE_TYPE } from './constant'
 import { NotFound404 } from './pages/NotFound404'
+import { ConfigProvider } from 'antd'
+import zhCN from 'antd/locale/zh_CN'
+import dayjs from 'dayjs'
+import 'dayjs/locale/zh-cn'
+dayjs.locale('zh-cn')
+
 const createRoute = (routes: RoutesProps[]) => {
   const list: React.ReactNode[] = []
   const recursion = (routes: RoutesProps[]) => {
@@ -34,11 +40,13 @@ export const App: FC = () => {
   const RouterComponent = ROUTE_TYPE === RoutesTypes.hash ? HashRouter : BrowserRouter
 
   return (
-    <RouterComponent>
-      <Routes>
-        <>{createRoute(routes)}</>
-        <Route path="*" element={<NotFound404 />}></Route>
-      </Routes>
-    </RouterComponent>
+    <ConfigProvider locale={zhCN}>
+      <RouterComponent>
+        <Routes>
+          <>{createRoute(routes)}</>
+          <Route path="*" element={<NotFound404 />}></Route>
+        </Routes>
+      </RouterComponent>
+    </ConfigProvider>
   )
 }
