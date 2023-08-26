@@ -46,7 +46,7 @@ export const LayoutComponent: FC<{
         {/* 侧边栏 */}
         {<SliderComponent routeConfiguration={routeConfiguration} />}
         {/* 头部 */}
-        <div className="flex flex-col flex-1">
+        <div className="flex flex-col flex-1 overflow-hidden">
           <Layout className="p-4">
             {/* 面包屑 */}
             <div className="flex justify-between">

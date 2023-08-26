@@ -22,6 +22,7 @@ export const Former = createFormer(Form, {
     TimePicker,
     DatePicker,
     TreeSelect,
+    RangePicker: DatePicker.RangePicker,
   },
   rules: {},
 })
