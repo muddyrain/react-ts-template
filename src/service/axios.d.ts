@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { AxiosInstance as IAxiosInstance } from 'axios'
 declare module 'axios' {
   export interface AxiosInstance extends IAxiosInstance {
