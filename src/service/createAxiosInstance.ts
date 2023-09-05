@@ -3,7 +3,7 @@ import { dealBusinessError, dealNetworkError } from './handle'
 import { IAxiosInstanceProps } from './types'
 import 'nprogress/nprogress.css'
 import NProgress from 'nprogress'
-
+import { useUserStore } from '@/store/userStore'
 export class CreateAxiosInstance {
   private whiteList: IAxiosInstanceProps['whiteList'] = []
   private codeList: IAxiosInstanceProps['codeList'] = {}
@@ -25,9 +25,8 @@ export class CreateAxiosInstance {
     })
     this.fetch.interceptors.request.use(
       config => {
+        const accountInfo = useUserStore.getState().accountInfo
         NProgress.start()
-        const accountJSON = window.sessionStorage.getItem('accountInfo')
-        const accountInfo = JSON.parse(accountJSON || '{}')
         if (accountInfo?.token) {
           config.headers['Authorization'] = accountInfo.token
         }

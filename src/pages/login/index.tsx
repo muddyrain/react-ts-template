@@ -1,17 +1,19 @@
 import { FC } from 'react'
 import styles from './index.module.less'
 import images from './images'
-import { useSetState, useLocalStorageState } from 'ahooks'
+import { useSetState } from 'ahooks'
 import { EyeInvisibleOutlined, EyeOutlined, LoadingOutlined } from '@ant-design/icons'
-import { AccountInfoType } from '@/constant/types'
+import { useNavigate } from 'react-router-dom'
+import { useUserStore } from '@/store/userStore'
 export const LoginPage: FC = () => {
+  const navigate = useNavigate()
   const [state, setState] = useSetState({
     username: 'admin',
     password: '123456',
     passwordType: 0,
     loading: false,
   })
-  const [accountInfo, setAccountInfo] = useLocalStorageState<AccountInfoType>('accountInfo', {})
+  const [setAccountInfo] = useUserStore(state => [state.setAccountInfo])
   const handleLogin = () => {
     setState({
       loading: true,
@@ -23,11 +25,10 @@ export const LoginPage: FC = () => {
         password,
         token: 'token',
       })
-      console.log(accountInfo)
       setState({
         loading: false,
       })
-      window.location.href = '/'
+      navigate('/')
     }, 1000)
   }
   return (

@@ -8,6 +8,7 @@ import { AccountInfoType } from '@/constant/types'
 import { useNavigate } from 'react-router-dom'
 import { NotNeedLoginWhiteList } from '@/router/whiteList'
 import { LeftOutlined } from '@ant-design/icons'
+import { useUserStore } from '@/store/userStore'
 const { Content } = Layout
 export const LayoutComponent: FC<{
   children: React.ReactNode
@@ -22,14 +23,15 @@ export const LayoutComponent: FC<{
     name = '',
     styles = {},
   } = (routeConfiguration as RoutesProps) || {}
-  const [accountInfo, setAccountInfo] = useLocalStorageState<AccountInfoType | undefined>(
-    'accountInfo'
-  )
+  const [accountInfo, setAccountInfo] = useUserStore(state => [
+    state.accountInfo,
+    state.setAccountInfo,
+  ])
   useEffect(() => {
     const needLoginType = Object.prototype.toString.call(routeConfiguration?.needLogin)
     if (!(needLoginType === '[object Boolean]' && routeConfiguration.needLogin)) {
       if (!accountInfo?.token && !NotNeedLoginWhiteList.includes(routeConfiguration.path)) {
-        setAccountInfo()
+        setAccountInfo(null)
         navigate('/login')
       }
     }
