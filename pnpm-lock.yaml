@@ -4364,19 +4364,6 @@ packages:
       }
     dev: true
 
-<<<<<<< HEAD
-  /muddyrain/1.4.6_reai4adcp4epbrqp6m3aaurkei:
-    resolution: {integrity: sha512-nNQuf2YrSKzsv33nuI2WXNd1KsNGaCCn9B55cqJBcwACRu2DoS+DpCK4KxR5OuwXxsnf+0ta5wRcjznpS+Rn/Q==}
-    peerDependencies:
-      ahooks: '>=3.0.0'
-      antd: '>=4.0.0'
-      react: '>=16.9.0'
-      react-dom: '>=16.9.0'
-    dependencies:
-      '@tippyjs/react': 4.2.6_biqbaboplfbrettd7655fr4n2y
-      ahooks: 3.7.7_react@18.2.0
-      antd: 5.5.0_biqbaboplfbrettd7655fr4n2y
-=======
   /muddyrain/1.4.2_reai4adcp4epbrqp6m3aaurkei:
     resolution:
       {
@@ -4391,7 +4378,6 @@ packages:
       "@tippyjs/react": 4.2.6(react-dom@18.2.0)(react@18.2.0)
       ahooks: 3.7.7(react@18.2.0)
       antd: 5.5.0(react-dom@18.2.0)(react@18.2.0)
->>>>>>> a5113291a82631228a8964e565d40919f44bd8e5
       cz-customizable: 7.0.0
       eslint-config-prettier: 8.8.0(eslint@8.41.0)
       eslint-plugin-prettier: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.41.0)(prettier@2.8.8)
@@ -6711,26 +6697,12 @@ packages:
       punycode: 2.3.0
     dev: true
 
-<<<<<<< HEAD
-  /use-sync-external-store/1.2.0_react@18.2.0:
-    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
-    dev: true
-
-  /user-home/2.0.0:
-    resolution: {integrity: sha512-KMWqdlOcjCYdtIJpicDSFBQ8nFwS2i9sslAd6f4+CBGcU4gist2REnr2fxj2YocvJFxSF3ZOHLYLVZnUxv4BZQ==}
-    engines: {node: '>=0.10.0'}
-=======
   /user-home@2.0.0:
     resolution:
       {
         integrity: sha512-KMWqdlOcjCYdtIJpicDSFBQ8nFwS2i9sslAd6f4+CBGcU4gist2REnr2fxj2YocvJFxSF3ZOHLYLVZnUxv4BZQ==,
       }
     engines: { node: ">=0.10.0" }
->>>>>>> a5113291a82631228a8964e565d40919f44bd8e5
     dependencies:
       os-homedir: 1.0.2
     dev: true
@@ -6941,21 +6913,24 @@ packages:
     dev: true
 
   /zustand/4.4.1_s3k22s5ab4eu26xuel7hiaraxy:
-    resolution: {integrity: sha512-QCPfstAS4EBiTQzlaGP1gmorkh/UL1Leaj2tdj+zZCZ/9bm0WS7sI2wnfD5lpOszFqWJ1DcPnGoY8RDL61uokw==}
-    engines: {node: '>=12.7.0'}
+    resolution:
+      {
+        integrity: sha512-QCPfstAS4EBiTQzlaGP1gmorkh/UL1Leaj2tdj+zZCZ/9bm0WS7sI2wnfD5lpOszFqWJ1DcPnGoY8RDL61uokw==,
+      }
+    engines: { node: ">=12.7.0" }
     peerDependencies:
-      '@types/react': '>=16.8'
-      immer: '>=9.0'
-      react: '>=16.8'
+      "@types/react": ">=16.8"
+      immer: ">=9.0"
+      react: ">=16.8"
     peerDependenciesMeta:
-      '@types/react':
+      "@types/react":
         optional: true
       immer:
         optional: true
       react:
         optional: true
     dependencies:
-      '@types/react': 18.2.6
+      "@types/react": 18.2.6
       react: 18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
     dev: true
