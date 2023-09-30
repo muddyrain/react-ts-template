@@ -18,5 +18,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 0,
     // 禁止检测 ! 断言
     '@typescript-eslint/no-non-null-assertion': 0,
+    '@typescript-eslint/no-explicit-any': ['off'],
   },
 }

@@ -9,13 +9,7 @@ export class CreateAxiosInstance {
   private codeList: IAxiosInstanceProps['codeList'] = {}
   private maps: IAxiosInstanceProps['maps']
   public fetch: AxiosInstance
-  constructor({
-    baseURL,
-    whiteList = [],
-    codeList = {},
-    maps,
-    Alert = () => null,
-  }: IAxiosInstanceProps) {
+  constructor({ baseURL, whiteList = [], codeList = {}, maps }: IAxiosInstanceProps) {
     this.whiteList = whiteList
     this.codeList = codeList
     this.maps = maps
@@ -59,14 +53,14 @@ export class CreateAxiosInstance {
         } else if (result?.[maps?.code] === 200) {
           return result?.[maps?.data] ?? {}
         } else {
-          dealBusinessError(result || {}, { codeList, maps, Alert })
+          dealBusinessError(result || {}, { codeList, maps })
           Promise.reject(result)
           return false
         }
       },
       error => {
         NProgress.done()
-        dealNetworkError(error?.response || {}, { codeList, maps, Alert })
+        dealNetworkError(error?.response || {}, { codeList, maps })
         return Promise.reject(error)
       }
     )

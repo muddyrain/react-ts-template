@@ -1,14 +1,12 @@
-import { USER_STORE_KEY } from '@/store/userStore'
+import { useUserStore } from '@/store/userStore'
 import { IAxiosInstanceProps } from './types'
 
 export default {
   401: () => {
-    window.sessionStorage.removeItem(USER_STORE_KEY)
-    window.location.href = '/login'
+    useUserStore.getState().setAccountInfo(null)
   },
   403: () => {
-    window.sessionStorage.removeItem(USER_STORE_KEY)
-    window.location.href = '/login'
+    useUserStore.getState().setAccountInfo(null)
   },
   500: () => {
     console.log('报 500了')
