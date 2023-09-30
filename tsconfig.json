@@ -3,12 +3,18 @@
     // 编辑配置的目标代码的版本标准
     "target": "ESNext",
     // 默认环境
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     // 配置编译目标的使用模块化标准
     "module": "ESNext",
     "skipLibCheck": true,
     // 移除掉注释
     "removeComments": true,
+    // 不允许出现any
+    "noImplicitAny": false,
     /* Bundler mode */
     // 模块解析策略
     "moduleResolution": "bundler",
@@ -29,7 +35,6 @@
     "experimentalDecorators": true,
     // 生成装饰器的元数据
     "emitDecoratorMetadata": true,
-
     /* Linting */
     "strict": true,
     // 未读取局部变量时启用错误报告。
@@ -40,9 +45,17 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
