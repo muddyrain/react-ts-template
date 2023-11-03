@@ -5,7 +5,7 @@ import { Avatar } from '@/assets'
 import { useNavigate } from 'react-router-dom'
 import { PAGE_TITLE } from '@/constant'
 import { Logo } from '@/assets/index'
-import { useUserStore } from '@/store/userStore'
+import { useUserStore } from '@/store/useUserStore'
 export const HeaderComponent: FC = () => {
   const navigate = useNavigate()
   const [accountInfo, setAccountInfo] = useUserStore(state => [

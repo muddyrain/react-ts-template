@@ -4,7 +4,7 @@ import images from './images'
 import { useSetState } from 'ahooks'
 import { EyeInvisibleOutlined, EyeOutlined, LoadingOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
-import { useUserStore } from '@/store/userStore'
+import { useUserStore } from '@/store/useUserStore'
 export const LoginPage: FC = () => {
   const navigate = useNavigate()
   const [state, setState] = useSetState({

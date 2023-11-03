@@ -6,7 +6,7 @@ import { LAYOUT_SCROLLBAR_CLASSES } from '@/constant/classes'
 import { useNavigate } from 'react-router-dom'
 import { NotNeedLoginWhiteList } from '@/router/whiteList'
 import { LeftOutlined } from '@ant-design/icons'
-import { useUserStore } from '@/store/userStore'
+import { useUserStore } from '@/store/useUserStore'
 const { Content } = Layout
 export const LayoutComponent: FC<{
   children: React.ReactNode

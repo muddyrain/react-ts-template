@@ -1,4 +1,4 @@
-import { useUserStore } from '@/store/userStore'
+import { useUserStore } from '@/store/useUserStore'
 import { IAxiosInstanceProps } from './types'
 
 export default {

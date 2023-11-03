@@ -3,7 +3,7 @@ import { dealBusinessError, dealNetworkError } from './handle'
 import { IAxiosInstanceProps } from './types'
 import 'nprogress/nprogress.css'
 import NProgress from 'nprogress'
-import { useUserStore } from '@/store/userStore'
+import { useUserStore } from '@/store/useUserStore'
 export class CreateAxiosInstance {
   private whiteList: IAxiosInstanceProps['whiteList'] = []
   private codeList: IAxiosInstanceProps['codeList'] = {}
