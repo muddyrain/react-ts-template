@@ -57,7 +57,7 @@ export const SliderComponent: FC<{
         inlineIndent={24}
         className="py-2"
         defaultOpenKeys={routesPaths.current}
-        onSelect={({ key }) => {
+        onClick={({ key }) => {
           navigate(key)
         }}
       />
