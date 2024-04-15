@@ -89,8 +89,8 @@ devDependencies:
     specifier: ^4.1.3
     version: 4.1.3
   muddyrain:
-    specifier: 1.6.4
-    version: 1.6.4(ahooks@3.7.7)(antd@5.5.0)(eslint@8.41.0)(prettier@2.8.8)(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)
+    specifier: 1.13.1
+    version: 1.13.1(ahooks@3.7.7)(antd@5.5.0)(eslint@8.41.0)(prettier@2.8.8)(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)
   nprogress:
     specifier: ^0.2.0
     version: 0.2.0
@@ -100,6 +100,9 @@ devDependencies:
   prettier:
     specifier: ^2.8.8
     version: 2.8.8
+  regen-design:
+    specifier: 0.0.1-beta.4
+    version: 0.0.1-beta.4
   tailwind-scrollbar:
     specifier: ^3.0.4
     version: 3.0.4(tailwindcss@3.3.2)
@@ -1019,6 +1022,34 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
+  /@regen-design/components@1.0.0:
+    resolution: {integrity: sha512-62Q7EKVFQHWjxy5EyCLl1wjEVdftUBZaDJ+rAZ3rbbouIrQEoRLzCJqFdlU5cu+aTiRxZqKtB7OTmAiN3ymi+A==}
+    dev: true
+
+  /@regen-design/constant@1.0.0:
+    resolution: {integrity: sha512-DxysOjEYRaEJ8fvJS67lbHdGbbgqlR6zlaQlofzAY/0MBPLugA9zO6klViLrBDkME8oG7xCGusXrJU4lIDAlTQ==}
+    dev: true
+
+  /@regen-design/hooks@1.0.0:
+    resolution: {integrity: sha512-Q/2JgVlxBumJphA/p0qTvUIKwA5z4nQ0d6XX90vspZo+yNUXVqrYCg7gwfE3IRFjtt1bVtjsTGEM48fpM3ZzMw==}
+    dev: true
+
+  /@regen-design/icons@1.0.0:
+    resolution: {integrity: sha512-hjCATh15ONDxln2WKg/+YtehseadgCWnau6GCFtcRtZ3vkv4tkJKViHJhiFDB3h8ap2Bp1TYMW+R9+US5XZ4Hw==}
+    dev: true
+
+  /@regen-design/theme@1.0.0:
+    resolution: {integrity: sha512-mKO29OcFsZDkC+FT92qNcUASFJYG/7tRyOhyBCCm4zwCbePGpaD4bvKZ75q41Nh6+5xjiUYZrbNuEu+rI8hI7w==}
+    dev: true
+
+  /@regen-design/types@1.0.0:
+    resolution: {integrity: sha512-5P9gcMQZ3WoEHOu3BqfzVZ+IoFQHRzX44KavE1O8WyZwJUz6RWbyKTGgqXR5uF5SECx4C1duCs1H6AFTCd8LGA==}
+    dev: true
+
+  /@regen-design/utils@1.0.0:
+    resolution: {integrity: sha512-IwzSr1qY6J35eP8rzBTFl4lI0OM4E/RTadQxi8i2n8qbZl75U7WOZwzJZBInwb7IufE3zpLoEDLEkVMwjzeB2A==}
+    dev: true
+
   /@remix-run/router@1.6.2:
     resolution: {integrity: sha512-LzqpSrMK/3JBAVBI9u3NWtOhWNw5AMQfrUFYB0+bDHTSw17z++WJLsPsxAuK+oSddsxk4d7F/JcdDPM1M5YAhA==}
     engines: {node: '>=14'}
@@ -1658,6 +1689,11 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
+    dev: true
+
+  /clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: true
 
   /color-convert@1.9.3:
@@ -3205,8 +3241,8 @@ packages:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
 
-  /muddyrain@1.6.4(ahooks@3.7.7)(antd@5.5.0)(eslint@8.41.0)(prettier@2.8.8)(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1):
-    resolution: {integrity: sha512-Cw81FfkL4C2Y/nZ/MRmXxPa48Rv8nhCqb02j2F5MiFsgTzZ9c0flEKhYaET42anfm4f/t5vmV0iv8G4jj9k4AA==}
+  /muddyrain@1.13.1(ahooks@3.7.7)(antd@5.5.0)(eslint@8.41.0)(prettier@2.8.8)(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1):
+    resolution: {integrity: sha512-AUR57PQxdocI638M0UjusmJxgUfqU8zCkj/9bdp7Z+Itm/SD7rYU29W9pR4BOsjn8N/rEvOKlZx6AZiTSj6jzA==}
     peerDependencies:
       ahooks: '>=3.0.0'
       antd: '>=4.0.0'
@@ -3223,6 +3259,7 @@ packages:
       gsap: 3.12.2
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+      react-draggable: 4.4.6(react-dom@18.2.0)(react@18.2.0)
       tailwindcss: 3.3.2(ts-node@10.9.1)
       tippy.js: 6.3.7
     transitivePeerDependencies:
@@ -4206,6 +4243,18 @@ packages:
       react: 18.2.0
       scheduler: 0.23.0
 
+  /react-draggable@4.4.6(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-LtY5Xw1zTPqHkVmtM3X8MUOxNDOUhv/khTgBgrUvwaS064bwVvxT+q5El0uUFNx5IEPKXuRejr7UqLwBIg5pdw==}
+    peerDependencies:
+      react: '>= 16.3.0'
+      react-dom: '>= 16.3.0'
+    dependencies:
+      clsx: 1.2.1
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
@@ -4291,6 +4340,21 @@ packages:
     dependencies:
       indent-string: 4.0.0
       strip-indent: 3.0.0
+    dev: true
+
+  /regen-design@0.0.1-beta.4:
+    resolution: {integrity: sha512-Acs+nloMlXOue5i4jAgPpyaSn3xLd36Vqzo6ufK9StAiCLKclXUs81ObxdSUaszOXh+Yu4Vx4IkILhVxgDdybQ==}
+    requiresBuild: true
+    dependencies:
+      '@regen-design/components': 1.0.0
+      '@regen-design/constant': 1.0.0
+      '@regen-design/hooks': 1.0.0
+      '@regen-design/icons': 1.0.0
+      '@regen-design/theme': 1.0.0
+      '@regen-design/types': 1.0.0
+      '@regen-design/utils': 1.0.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: true
 
   /regenerator-runtime@0.13.11:

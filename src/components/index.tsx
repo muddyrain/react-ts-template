@@ -1,4 +1,1 @@
-import { Former } from './former'
-import { Tabler, Dialog } from 'muddyrain'
-
-export { Former, Tabler, Dialog }
+export { Tabler, Former, Dialog } from 'muddyrain'
