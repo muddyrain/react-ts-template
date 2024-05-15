@@ -1,4 +1,4 @@
-import { Button } from 'regen-design'
+import { Button } from 'antd'
 export const HomePage = () => {
   return (
     <>
