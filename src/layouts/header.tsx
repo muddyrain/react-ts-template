@@ -16,19 +16,14 @@ export const HeaderComponent: FC = () => {
     <>
       <Layout.Header className="flex bg-gradient-to-r from-blue-500 to-sky-600 items-center justify-between">
         <div className="h-16">
-          {/* 左侧 */}
           <div
             className="flex h-full px-4 items-center justify-center cursor-pointer duration-300 hover:bg-blue-400"
             onClick={() => navigate('/')}
           >
-            {/* Logo */}
             <img src={Logo} className="w-8" />
-            {/* 标题 */}
             <span className="text-color text-lg ml-2 text-white">{PAGE_TITLE}</span>
           </div>
         </div>
-        {/* 右侧 */}
-
         <div className="flex items-center text-white">
           <Dropdown
             trigger={['click']}
@@ -52,7 +47,7 @@ export const HeaderComponent: FC = () => {
             }}
           >
             <div className="hover:bg-sky-500 flex items-center duration-300 px-4 cursor-pointer">
-              <img src={Avatar} />
+              <img src={Avatar} width={36} className={'rounded-full'} />
               <span className="ml-1">{accountInfo?.username || '沙琪玛~'}</span>
             </div>
           </Dropdown>

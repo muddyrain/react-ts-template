@@ -3,6 +3,7 @@ import { useSetState } from 'ahooks'
 import { useNavigate } from 'react-router-dom'
 import { useUserStore } from '@/store/useUserStore'
 import { Button, Form, Input } from 'antd'
+import bg from './bg.png'
 export const LoginPage: FC = () => {
   const navigate = useNavigate()
   const [state, setState] = useSetState({
@@ -30,9 +31,15 @@ export const LoginPage: FC = () => {
     }, 1000)
   }
   return (
-    <div className={`w-screen h-screen`}>
-      <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] m-auto bg-white w-[960px] h-[640px] duration-300 overflow-hidden rounded-lg flex">
-        <div className="relative w-full h-full z-1 flex flex-col justify-center items-center">
+    <div
+      className={`w-screen h-screen`}
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: '100% 100%',
+      }}
+    >
+      <div className="absolute top-[50%] shadow left-[200px] translate-y-[-50%] m-auto bg-white w-[420px] h-[360px] duration-300 overflow-hidden rounded-lg flex">
+        <div className="relative w-full h-full z-1 flex flex-col justify-center items-center p-8">
           <div className="text-center">
             <div className="inline-block text-3xl text-blue-600 font-bold relative">
               <span className="z-[1] relative">登录</span>
@@ -40,7 +47,7 @@ export const LoginPage: FC = () => {
             </div>
           </div>
           <Form
-            className="w-40 my-10"
+            className="w-full my-6"
             onFinish={() => {
               handleLogin()
             }}
@@ -49,6 +56,7 @@ export const LoginPage: FC = () => {
               <Input
                 placeholder="请输入账号"
                 value={state.username}
+                className={'p-2'}
                 type={'username'}
                 onChange={e => {
                   setState({
@@ -60,6 +68,7 @@ export const LoginPage: FC = () => {
             <Form.Item>
               <Input.Password
                 placeholder="请输入密码"
+                className={'p-2'}
                 value={state.password}
                 onChange={e => {
                   setState({
@@ -69,7 +78,7 @@ export const LoginPage: FC = () => {
               />
             </Form.Item>
             <div className="flex justify-center">
-              <Button block type={'primary'} htmlType={'submit'}>
+              <Button block type={'primary'} className={'h-10 text-lg'} htmlType={'submit'}>
                 登录
               </Button>
             </div>
