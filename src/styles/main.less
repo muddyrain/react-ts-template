@@ -8,6 +8,13 @@
   box-sizing: border-box;
 }
 
+*,
+::before,
+::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: theme('borderColor.DEFAULT', currentColor);
+}
 
 #root {
   width: 100vw;

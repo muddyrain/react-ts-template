@@ -1,11 +1,17 @@
 import { Button, Result } from 'antd'
 import { FC } from 'react'
-import styles from './index.module.less'
+import backgroundImage from '@/assets/background.jpg'
 import { useNavigate } from 'react-router-dom'
 export const NotFound404: FC = () => {
   const navigate = useNavigate()
   return (
-    <div className={`w-screen h-screen bg-red-200  ${styles.container}`}>
+    <div
+      className={`w-screen h-screen bg-red-200`}
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: `100% 100%`,
+      }}
+    >
       <Result
         status="404"
         title="404"

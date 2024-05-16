@@ -1,22 +1,21 @@
+
 .custom_layout_slider {
   .ant-menu {
     .ant-menu-submenu-selected {
       .ant-menu-submenu-title {
-        color: #49a2f8
+        &:hover{
+          color: theme('colors.primary');
+        }
+        color: theme('colors.primary');
       }
     }
-
     .ant-menu-item {
-      padding: 0 16px;
       border-radius: 1px;
-
-      &.ant-menu-item-selected {
-        background-color: #49a2f8;
-        color: #ffffff;
-
-      }
+        &.ant-menu-item-selected {
+          background-color: transparent;
+          color: theme('colors.primary');
+        }
     }
-
     border-inline-end: none !important;
   }
 }

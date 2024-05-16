@@ -3,7 +3,11 @@ const tailwindScrollbar = require('tailwind-scrollbar')
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'primary': '#1A66FF',
+      }
+    },
   },
   plugins: [tailwindScrollbar({ nocompatible: true })],
   corePlugins: {

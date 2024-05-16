@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { Layout, Breadcrumb, Space } from 'antd'
 import { RoutesProps } from '@/constant/types'
 import { HeaderComponent, SliderComponent } from '.'
@@ -14,6 +14,7 @@ export const LayoutComponent: FC<{
   routeConfiguration: RoutesProps
 }> = ({ children, routeConfiguration }) => {
   const navigate = useNavigate()
+  const [collapsed, setCollapsed] = useState(false)
   const {
     backgroundColor = '#ffffff',
     breadcrumb = [],
@@ -34,50 +35,21 @@ export const LayoutComponent: FC<{
       }
     }
   }, [routeConfiguration, accountInfo])
-
-  // 纯净模式默认无布局
   if (pure) {
     return <>{React.cloneElement(children as JSX.Element, { ...routeConfiguration })}</>
   }
   return (
     <Layout className="w-full h-full">
-      <HeaderComponent />
+      <HeaderComponent
+        collapsed={collapsed}
+        onCollapsedClick={() => {
+          setCollapsed(!collapsed)
+        }}
+      />
       <Layout>
-        {/* 侧边栏 */}
-        {<SliderComponent routeConfiguration={routeConfiguration} />}
-        {/* 头部 */}
+        <SliderComponent collapsed={collapsed} routeConfiguration={routeConfiguration} />
         <div className="flex flex-col flex-1 overflow-hidden">
-          <Layout className="p-4">
-            {/* 面包屑 */}
-            <div className="flex justify-between">
-              <Breadcrumb
-                className="mb-2"
-                items={[
-                  {
-                    title: '首页',
-                    path: '/',
-                  },
-                  ...(breadcrumb?.length
-                    ? [...breadcrumb]
-                    : [
-                        {
-                          title: name,
-                        },
-                      ]),
-                ]}
-              />
-              <Space
-                className="cursor-pointer hover:text-indigo-400 duration-300"
-                size={2}
-                onClick={() => {
-                  navigate(-1)
-                }}
-              >
-                <LeftOutlined />
-                <span>返回</span>
-              </Space>
-            </div>
-            {/* 内容中心 */}
+          <Layout className="p-4 bg-[#F0F2F5]">
             <Content
               className={`p-4 overflow-auto shadow-sm ${LAYOUT_SCROLLBAR_CLASSES}`}
               style={{
